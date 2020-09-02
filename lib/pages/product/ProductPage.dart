@@ -19,9 +19,18 @@ class _ProductPage extends State<ProductPage>{
     print(widget.params);
     return Scaffold(
       appBar: AppBar(
-        title: Text('标题'),
+        title: Text('商品页面'),
       ),
-      body: Text('这里是商品页面'),
+      body: Column(
+        children: <Widget>[
+          Text(
+            '我的颜色是主题色',
+            style: TextStyle(
+              color: Theme.of(context).primaryColor
+            ),
+          )
+        ]
+      ),
     );
   }
   
