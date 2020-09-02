@@ -3,8 +3,8 @@ import 'package:flutter/widgets.dart';
 
 class HomePage extends  StatefulWidget{
 
-  Map params;
-  HomePage({ this.params });
+  // final Map params;
+  HomePage();
 
   @override
   _HomePageState createState() {
@@ -21,7 +21,16 @@ class _HomePageState extends State<HomePage>{
       appBar: AppBar(
         title: Text('text'),
       ),
-      body: Text('我是首页'),
+      body: Column(
+        children: <Widget>[
+          FlatButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/product', arguments: { 'productId': '1111' });
+            },
+            child: Text('点击我跳转商品页面并携带参数'),
+          )
+        ],
+      )
     );
   }
   
