@@ -6,13 +6,15 @@ class ColorTheme {
 
   static ThemeData light() {
     return ThemeData(
-      primaryColor: primary
+      primaryColor: primary,
+      accentColor: primary
     );
   }
 
   static ThemeData dark() {
     return ThemeData(
-      primaryColor: dark_primary
+      primaryColor: dark_primary,
+      accentColor: dark_primary
     );
   }
 
