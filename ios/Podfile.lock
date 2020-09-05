@@ -1,0 +1,33 @@
+PODS:
+  - Flutter (1.0.0)
+  - HandyJSON (5.0.2)
+  - tencent_im_plugin (0.0.1):
+    - Flutter
+    - HandyJSON
+    - TXIMSDK_iOS (= 4.6.58)
+  - TXIMSDK_iOS (4.6.58)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - tencent_im_plugin (from `.symlinks/plugins/tencent_im_plugin/ios`)
+
+SPEC REPOS:
+  trunk:
+    - HandyJSON
+    - TXIMSDK_iOS
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  tencent_im_plugin:
+    :path: ".symlinks/plugins/tencent_im_plugin/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  tencent_im_plugin: a055ed155fd2cae7f006e756dbec96255b4aa0a3
+  TXIMSDK_iOS: d4231ccd8a045f54ca04d008dba46fdbf25687fb
+
+PODFILE CHECKSUM: c34e2287a9ccaa606aeceab922830efb9a6ff69a
+
+COCOAPODS: 1.8.4

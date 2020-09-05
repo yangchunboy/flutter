@@ -156,6 +156,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  tencent_im_plugin:
+    dependency: "direct main"
+    description:
+      name: tencent_im_plugin
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.44"
   term_glyph:
     dependency: transitive
     description:

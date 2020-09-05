@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:tencent_im_plugin/tencent_im_plugin.dart';
 
 class HomePage extends  StatefulWidget{
 
