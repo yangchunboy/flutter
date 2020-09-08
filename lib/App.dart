@@ -6,10 +6,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
-      theme: ColorTheme.dark(),
-      onGenerateRoute: (settings) {
-        return Router.onGenerateRoute(settings);
-      });
+        initialRoute: '/',
+        theme: ColorTheme.light(),
+        darkTheme: ColorTheme.dark(),
+        onGenerateRoute: (settings) {
+          return Router.onGenerateRoute(settings);
+        });
   }
 }
