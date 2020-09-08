@@ -36,7 +36,8 @@ class _App extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
         initialRoute: '/',
-        theme: ColorTheme.dark(),
+        theme: ColorTheme.light(),
+        darkTheme: ColorTheme.dark(),
         onGenerateRoute: (settings) {
           return Router.onGenerateRoute(settings);
         });
