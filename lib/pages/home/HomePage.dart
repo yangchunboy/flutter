@@ -32,6 +32,12 @@ class _HomePageState extends State<HomePage>{
               Navigator.pushNamed(context, '/product', arguments: { 'productId': '1111' });
             },
             child: Text('点击我跳转商品页面并携带参数'),
+          ),
+          FlatButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/detail');
+            },
+            child: Text('点击跳转详情页面'),
           )
         ],
       )
