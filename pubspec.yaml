@@ -20,6 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   dio: 3.0.10
+  flutter_screenutil: 2.3.0
 
 dev_dependencies:
   flutter_test:

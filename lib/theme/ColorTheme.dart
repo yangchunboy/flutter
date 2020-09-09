@@ -7,7 +7,7 @@ class ColorTheme {
   static ThemeData light() {
     return ThemeData(
       primaryColor: primary,
-      accentColor: primary
+      // accentColor: primary
     );
   }
 

@@ -1,5 +1,7 @@
+import 'package:app/config/ConfigData.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage extends  StatefulWidget{
 
@@ -17,6 +19,8 @@ class _HomePageState extends State<HomePage>{
   // print(widget.params);
   @override
   Widget build(BuildContext context) {
+    //设置字体大小根据系统的“字体大小”辅助选项来进行缩放,默认为false
+    ScreenUtil.init(context, width: ConfigData.width, height: ConfigData.width, allowFontScaling: true);
     return Scaffold(
       appBar: AppBar(
         title: Text('text'),

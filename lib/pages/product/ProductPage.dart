@@ -16,7 +16,7 @@ class ProductPage extends  StatefulWidget{
 class _ProductPage extends State<ProductPage>{
   @override
   Widget build(BuildContext context) {
-    print(widget.params);
+    // print(widget.params);
     return Scaffold(
       appBar: AppBar(
         title: Text('商品页面'),
@@ -28,6 +28,9 @@ class _ProductPage extends State<ProductPage>{
             style: TextStyle(
               color: Theme.of(context).primaryColor
             ),
+          ),
+          Text(
+            '我是上一个页面传过来的商品id:${widget.params['productId']}'
           )
         ]
       ),
