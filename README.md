@@ -1,16 +1,67 @@
-# app
+# flutter脚手架
+根据自己需求实现的一个flutter脚手架
 
-A new Flutter project.
+##  开发准备
 
-## Getting Started
+1. 开发工具推荐vscode
+2. flutter版本：由于我搭建的时候是基于1.17.4，所以建议在这个版本下使用，有需要的可以自己升级flutter版本
+3. 代码规范：按照vscode的规范提示，不能出现红色的报错
 
-This project is a starting point for a Flutter application.
+##  运行方法
 
-A few resources to get you started if this is your first Flutter project:
+按下面所示运行
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```
+flutter pub get // 先安装依赖
+open -a Simulator // 打开iOS的模拟器
+flutter run // 运行
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## 目录结构介绍
+
+```javascript
+├── App.dart  // 根widget
+├── api // 存储所有的请求
+├── components  // 存储被多个页面共用的组件
+├── config // 存放一些固定的配置参数例如请求域名，支付宝appid等
+│   └── ConfigData.dart
+├── main.dart  // 入口文件
+├── mixins // 放一些混入的类
+├── model // 存储请求的返回结果的model
+│   └── TestModel.dart
+├── pages // 存放单独页面,每个文件夹代表一个页面
+│   ├── demo
+│   │   └── DemoPage.dart
+│   ├── home
+│   │   └── HomePage.dart
+│   ├── product
+│       └── ProductPage.dart
+├── provider // 存放provider的model
+│   └── CountModel.dart
+├── router // 所有路由定义的地方
+│   └── router.dart
+├── theme // 主题的定义
+│   └── ColorTheme.dart
+└── utils // 存放一些公共的函数
+    ├── request // 公共的请求方法和拦截器
+    │   ├── interceptors.dart
+    │   └── request.dart
+    └── utils.dart // 公共的方法
+```
+
+##  
+
+##  其他
+
+1. 请求接口返回值生成model建议直接在这个网站上转换[https://app.quicktype.io/](https://app.quicktype.io/)(需要翻墙)
+
+
+
+##  参考文献
+
+- [flutter中文网](https://flutter.cn/)
+- [dart核心api文档](https://api.dart.dev/stable/2.9.2/dart-core/dart-core-library.html)
+- [provider](https://pub.flutter-io.cn/packages?q=provider)
+- [flutter_screenutil](https://pub.flutter-io.cn/packages/flutter_screenutil)
