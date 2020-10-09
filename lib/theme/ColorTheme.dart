@@ -7,6 +7,8 @@ class ColorTheme {
   static ThemeData light() {
     return ThemeData(
       primaryColor: primary,
+      // textTheme: 
+      // dialogBackgroundColor: dark_primary
       // accentColor: primary
     );
   }

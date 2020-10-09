@@ -20,6 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   dio: 3.0.10
+  provider: 4.3.2+2
   flutter_screenutil: 2.3.0
 
 dev_dependencies:

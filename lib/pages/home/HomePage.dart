@@ -38,6 +38,18 @@ class _HomePageState extends State<HomePage>{
               Navigator.pushNamed(context, '/detail');
             },
             child: Text('点击跳转详情页面'),
+          ),
+          FlatButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/tools');
+            },
+            child: Text('点击跳转工具页面'),
+          ),
+          FlatButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/provider');
+            },
+            child: Text('点击跳转providerDemo'),
           )
         ],
       )

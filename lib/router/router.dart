@@ -1,14 +1,18 @@
+import 'package:app/pages/tools/toolsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages/home/HomePage.dart';
 import 'package:app/pages/product/ProductPage.dart';
 import 'package:app/pages/detail/DetailPage.dart';
+import 'package:app/pages/providerDemo/ProviderDemo.dart';
 
 
 class Router {
   static Map routes = {
     '/': (params) => HomePage(),
     '/product': (params) => ProductPage(params: params),
-    '/detail': (params) => DetailPage()
+    '/detail': (params) => DetailPage(),
+    '/tools': (params) => ToolsPage(),
+    '/provider': (params) => ProviderDemoPage(),
   };
 
   static onGenerateRoute(settings) {

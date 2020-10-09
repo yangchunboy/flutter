@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 class DemoPage extends  StatefulWidget{
 
   final Map params;
-  DemoPage(this.params);
+  DemoPage({this.params});
 
   @override
   _DemoPage createState() {
