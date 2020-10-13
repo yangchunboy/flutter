@@ -24,13 +24,15 @@ flutter run // 运行
 ```javascript
 ├── App.dart  // 根widget
 ├── api // 存储所有的请求
+│   └── sale.dart // 存储每个单独模块的请求以及将返回数据转换为model（此例子为销售模块的请求）
 ├── components  // 存储被多个页面共用的组件
 ├── config // 存放一些固定的配置参数例如请求域名，支付宝appid等
 │   └── ConfigData.dart
 ├── main.dart  // 入口文件
 ├── mixins // 放一些混入的类
 ├── model // 存储请求的返回结果的model
-│   └── TestModel.dart
+│   └── sale // 对应api文件夹下面的模块
+│       └── ShopListModel.dart // 当前这个模块下的每个请求返回数据的model
 ├── pages // 存放单独页面,每个文件夹代表一个页面
 │   ├── demo
 │   │   └── DemoPage.dart

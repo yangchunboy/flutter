@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage>{
             onPressed: () {
               Navigator.pushNamed(context, '/detail');
             },
-            child: Text('点击跳转详情页面'),
+            child: Text('点击我提起去请求数据和展示的demo页面'),
           ),
           FlatButton(
             onPressed: () {
