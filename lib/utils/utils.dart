@@ -1,7 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 class Utils {
+
+  // 设置本地存储
+  static void setStorage(String key, String value) async{
+    final SharedPreferences _prefs = await SharedPreferences.getInstance();
+    await _prefs.setString(key, value);
+  }
+
+  // 获取本地存储
+  static Future getStorage(String key) async{
+    final SharedPreferences _prefs = await SharedPreferences.getInstance();
+    return _prefs.getString(key);
+  }
+
+  // 移除本地存储
+  static void removeStorage(String key) async{
+    final SharedPreferences _prefs = await SharedPreferences.getInstance();
+    await _prefs.remove(key);
+  }
+
   static void showLoading(BuildContext context, [String text]) {
     text = text ?? "Loading...";
     showDialog<void>(

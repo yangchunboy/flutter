@@ -22,6 +22,7 @@ dependencies:
   dio: 3.0.10
   provider: 4.3.2+2
   flutter_screenutil: 2.3.0
+  shared_preferences: 0.5.12
 
 dev_dependencies:
   flutter_test:
