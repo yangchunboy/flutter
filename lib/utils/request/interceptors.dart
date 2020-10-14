@@ -8,10 +8,18 @@ class CustomInterceptors extends InterceptorsWrapper {
   }
   @override
   Future onResponse(Response response) {
-    print(response.data);
-    Map<String, dynamic> responseData = jsonDecode(response.data.toString()) as Map<String, dynamic>;
-    if (responseData['code'] == 1000) {
-      return super.onResponse(response);
+    try{
+      Map<String, dynamic> responseData = jsonDecode(response.data.toString()) as Map<String, dynamic>;
+      if (response.statusCode == 200) {
+        if (responseData['code'] == 1000) {
+          return super.onResponse(response);
+        } else {
+          Utils.showToast(responseData['message'] as String);
+          throw(responseData['message']);
+        }
+      }
+    } catch(error) {
+      throw(error);
     }
     // print("RESPONSE[${response?.statusCode}] => PATH: ${response?.request?.path}");
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 
 class Utils {
@@ -20,6 +21,19 @@ class Utils {
   static void removeStorage(String key) async{
     final SharedPreferences _prefs = await SharedPreferences.getInstance();
     await _prefs.remove(key);
+  }
+
+  // 展示toast提示
+  static void showToast(String message) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.CENTER,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.black,
+      textColor: Colors.white,
+      fontSize: 16.0
+    );
   }
 
   static void showLoading(BuildContext context, [String text]) {

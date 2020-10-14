@@ -26,7 +26,7 @@ class Router {
       // pass the data to the correct screen.
       return MaterialPageRoute(
         builder: (context) {
-          return routes[settings.name](params);
+          return routes[settings.name as String](params);
         },
       );
     }
