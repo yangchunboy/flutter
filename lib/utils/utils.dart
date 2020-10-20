@@ -5,6 +5,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 class Utils {
 
+  static GlobalKey<NavigatorState> navigatorKey = new GlobalKey<NavigatorState>();
+
   // 设置本地存储
   static void setStorage(String key, String value) async{
     final SharedPreferences _prefs = await SharedPreferences.getInstance();

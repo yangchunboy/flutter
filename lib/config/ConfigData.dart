@@ -6,7 +6,7 @@ class ConfigData {
   static const  bool debug = true;
 
   // 请求的路径
-  static const String requestUrl = debug ? 'http://192.168.0.57:7001': 'http://192.168.0.102:7001';
+  static const String requestUrl = debug ? 'http://192.168.1.102:7001': 'http://192.168.0.102:7001';
 
 
   // 设计图的宽度用于初始化flutter_screenutil包

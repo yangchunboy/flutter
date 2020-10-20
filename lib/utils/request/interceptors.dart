@@ -13,9 +13,13 @@ class CustomInterceptors extends InterceptorsWrapper {
       if (response.statusCode == 200) {
         if (responseData['code'] == 1000) {
           return super.onResponse(response);
-        } else {
+        } 
+        else if (responseData['code'] == 1002) {
+          Utils.navigatorKey.currentState.pushNamedAndRemoveUntil('/login', (route) => route == null);
+        }
+        else {
           Utils.showToast(responseData['message'] as String);
-          throw(responseData['message']);
+          // throw(responseData['message']);
         }
       }
     } catch(error) {

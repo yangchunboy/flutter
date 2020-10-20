@@ -4,6 +4,7 @@ import 'package:app/pages/home/HomePage.dart';
 import 'package:app/pages/product/ProductPage.dart';
 import 'package:app/pages/detail/DetailPage.dart';
 import 'package:app/pages/providerDemo/ProviderDemo.dart';
+import 'package:app/pages/login/loginPage.dart';
 
 
 class Router {
@@ -13,6 +14,8 @@ class Router {
     '/detail': (params) => DetailPage(),
     '/tools': (params) => ToolsPage(),
     '/provider': (params) => ProviderDemoPage(),
+    '/login': (params) => LoginPage()
+
   };
 
   static onGenerateRoute(settings) {

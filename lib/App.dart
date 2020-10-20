@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:app/router/router.dart';
 import 'package:app/theme/ColorTheme.dart';
-import 'package:app/config/ConfigData.dart';
+import 'package:app/utils/utils.dart';
+
+
+final GlobalKey<NavigatorState> navigatorKey = new GlobalKey<NavigatorState>();
 
 
 class App extends StatelessWidget {
@@ -12,6 +14,7 @@ class App extends StatelessWidget {
         initialRoute: '/',
         theme: ColorTheme.light(),
         darkTheme: ColorTheme.dark(),
+        navigatorKey: Utils.navigatorKey,
         onGenerateRoute: (settings) {
           return Router.onGenerateRoute(settings);
         });
