@@ -1,7 +1,5 @@
 
 import 'package:app/utils/request.dart';
-import 'package:dio/dio.dart';
-import 'dart:convert';
 
 import 'package:app/model/sale/ShopListModel.dart';
 
@@ -13,10 +11,8 @@ class SaleHttp {
       "refereeId": refereeId,
       "page": page
     };
-    Response response = await http.get('/api/sale/shopSearch', queryParameters: query);
-    Map<String, dynamic> data = json.decode(response.data.toString()) as Map<String, dynamic>;
-    print(data);
-    return ShopListModel.fromJson(data['data']);
+    Map<String, dynamic> data = await Http.get('/api/sale/shopSearch', query);
+    return ShopListModel.fromJson(data);
   }
 
 }
