@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:app/provider/CountModel.dart';
+import 'package:app/provider/ThemeChangeModel.dart';
 
 
 class ProviderDemoPage extends  StatefulWidget{
@@ -23,16 +24,32 @@ class _ProviderDemoPage extends State<ProviderDemoPage>{
       appBar: AppBar(
         title: Text('标题'),
       ),
-      body: Row(
+      body: Column(
         children: [
-          Text('当前点击的此时'),
+          Text('当前点击的次数'),
           Consumer<CountModel>(
             builder: (context, counter, child) => Text(
               '${counter.count}',
               style: Theme.of(context).textTheme.headline4,
             ),
           ),
-          
+          InkWell(
+            onTap: () {
+              ThemeChangeModel themeChangeModel = context.read<ThemeChangeModel>();
+              if (themeChangeModel.theme == 1) {
+                themeChangeModel.changeTheme(2);
+              } else {
+                themeChangeModel.changeTheme(1);
+              }
+            },
+            child: Text('点击切换主题'),
+          ),
+          Row(
+            children: [
+              Text('当前的主题模式是:'),
+              Consumer<ThemeChangeModel>(builder: (context, theme, _) => Text(theme.themeText))
+            ]
+          )
         ]
       ),
       floatingActionButton: FloatingActionButton(
