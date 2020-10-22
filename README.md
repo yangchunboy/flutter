@@ -22,6 +22,14 @@ flutter run // 运行
 ## 目录结构介绍
 
 ```javascript
+│
+assets // 存放静态资源文件，图片固定json或者iconfont字体
+├── images // 存放固定的图片
+│   └── smile.png
+└── json // 存放固定的json文件
+│
+lib // 存放项目的所有代码
+│
 ├── App.dart  // 根widget
 ├── api // 存储所有的请求
 │   └── sale.dart // 存储每个单独模块的请求以及将返回数据转换为model（此例子为销售模块的请求）

@@ -31,7 +31,9 @@ class _ProductPage extends State<ProductPage>{
           ),
           Text(
             '我是上一个页面传过来的商品id:${widget.params['productId']}'
-          )
+          ),
+          Text('这是一张静态引用的图片'),
+          Image.asset('assets/images/smile.png')
         ]
       ),
     );
