@@ -26,6 +26,10 @@ flutter run // 运行
 ├── api // 存储所有的请求
 │   └── sale.dart // 存储每个单独模块的请求以及将返回数据转换为model（此例子为销售模块的请求）
 ├── components  // 存储被多个页面共用的组件
+│   ├── Dialog // 存放公共的dialog组件
+│   │   └── ConfirmDialog.dart
+│   └── Loading // 存放请求的展示的loading组件
+│       └── Loading.dart
 ├── config // 存放一些固定的配置参数例如请求域名，支付宝appid等
 │   └── ConfigData.dart
 ├── main.dart  // 入口文件
