@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ColorTheme {
+class ThemeStyle {
   static const Color primary = Colors.white;
   static const Color dark_primary = Colors.red;
 
