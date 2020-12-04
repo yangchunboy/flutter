@@ -10,7 +10,11 @@ import 'package:app/pages/login/loginPage.dart';
 class Router {
   static Map routes = {
     '/': (params) => HomePage(),
-    '/product': (params) => ProductPage(params: params),
+    '/product': (params){ 
+      // print(params);
+      String productId = params['productId'];
+      return ProductPage(productId: productId); 
+    },
     '/detail': (params) => DetailPage(),
     '/tools': (params) => ToolsPage(),
     '/provider': (params) => ProviderDemoPage(),
@@ -18,7 +22,7 @@ class Router {
 
   };
 
-  static onGenerateRoute(settings) {
+  static onGenerateRoute(RouteSettings settings) {
           // If you push the PassArguments route
     if (routes[settings.name] != null) {
       // Cast the arguments to the correct type: ScreenArguments.
@@ -29,7 +33,7 @@ class Router {
       // pass the data to the correct screen.
       return MaterialPageRoute(
         builder: (context) {
-          return routes[settings.name as String](params);
+          return routes[settings.name](params);
         },
       );
     }

@@ -3,9 +3,8 @@ import 'package:flutter/widgets.dart';
 
 class ProductPage extends  StatefulWidget{
 
-  final Map<String, dynamic> params;
-  ProductPage({Key key, this.params}):super();
-
+  ProductPage({Key key, this.productId }):super();
+  String productId;
   @override
   _ProductPage createState() {
     return _ProductPage();
@@ -16,7 +15,7 @@ class ProductPage extends  StatefulWidget{
 class _ProductPage extends State<ProductPage>{
   @override
   Widget build(BuildContext context) {
-    // print(widget.params);
+    print(widget.productId);
     return Scaffold(
       appBar: AppBar(
         title: Text('商品页面'),
@@ -30,7 +29,7 @@ class _ProductPage extends State<ProductPage>{
             ),
           ),
           Text(
-            '我是上一个页面传过来的商品id:${widget.params['productId']}'
+            '我是上一个页面传过来的商品id:${widget.productId}'
           ),
           Text('这是一张静态引用的图片'),
           Image.asset('assets/images/smile.png')
